@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Memories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>CATC</h1>
+        <p>01.09.2026 - 10.09.2026</p>
+    </header>
+
+
+<div id="bottom-section"></div>
+
+    <!-- Friends Section -->
+    <section class="friends-section">
+        <h2>God Sends</h2>
+        <div class="friends-list">
+            <a href="naishana.html" class="friend-card">Naishana</a>
+            <a href="parvathy.html" class="friend-card">Parvathy</a>
+            <a href="aami.html" class="friend-card">Aami</a>
+            <a href="nazrin.html" class="friend-card">Nasrin</a>
+             <a href="ajmi.html" class="friend-card">Ajmi</a>
+        </div>
+    </section>
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="gallery.html" class="gallery-btn">Gallery</a>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+  <a href="index.html" class="home-btn">Go to Home Page</a>
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollPosition = Math.min(window.scrollY / 150, 1);
+    document.body.style.setProperty('--scroll', scrollPosition);
+  });
+</script>
+
+<div id="bottom-section"></div>
+
+<!-- Left Side Redirect Button -->
+<a href="diary.html" class="left-redirect-btn">
+  📖 Camp Diary
+</a>
+
+</body>
+</html>

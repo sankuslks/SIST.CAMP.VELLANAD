@@ -1,0 +1,540 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&family=Bebas+Neue&display=swap');
+
+/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c2d5e9;
+    color: #212529;
+    font-family: 'Poppins', sans-serif; /* Body text ke liye Poppins */
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Header Styling */
+/* Header Base Style (Center-il nilkkaan) */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s linear;
+    will-change: transform;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    /* Smooth translate & scale */
+    transform: translate(
+        calc(var(--scroll, 0) * -35vw),
+        calc(var(--scroll, 0) * 0px)
+    ) scale(calc(1 - (var(--scroll, 0) * 0.3)));
+    transform-origin: left center;
+    will-change: transform;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 10px;
+    opacity: calc(1 - (var(--scroll, 0) * 1.5));
+    transition: opacity 0.1s linear;
+}
+
+/* Scroll cheyyumbol Top-Left-ilottu maaraan */
+header.scrolled {
+    padding: 15px 25px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header.scrolled h1 {
+    font-size: 1.5rem; /* Size kuranju left-ilottu marum */
+}
+
+header.scrolled p {
+    display: none; /* Subtitle hidden aakum */
+}
+
+/* Day Sections (Scroll Layout) */
+.day-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #c2d5e9;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.day-section:hover {
+    transform: translateY(-3px);
+}
+
+.day-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.day-section img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.day-section p {
+    font-size: 1.05rem;
+    color: #000000;
+}
+
+/* Friends Section at Bottom */
+.friends-section {
+    max-width: 800px;
+    margin: 60px auto 100px auto;
+    padding: 20px;
+}
+
+.friends-section h2 {
+    font-family: "Bebas Neue";
+    
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #0c0d62;
+}
+
+.friends-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Friend Clickable Cards */
+.friend-card {
+    display: inline-block;
+    padding: 14px 32px;
+    background: radial-gradient(circle, #e2ebf5,#a0bad0);
+    color: #00094bd3;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 14px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.friend-card:hover, .friend-card:active {
+    background: radial-gradient(circle, #e2ebf5,#a0bad0);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(127, 4, 110, 0.4);
+}/* Landing Page Specific Styles */
+.landing-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d1b35, #0b172c);
+    color: #ffffff;
+    padding: 20px;
+}
+
+.landing-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    background: #1b346776;
+    backdrop-filter: blur(10px);
+    padding: 120px 80px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.landing-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: -100px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.camp-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.camp-gallery img {
+    width: 80%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    will-change: opacity, transform;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    color: #e0e0e0;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #ffffff;
+    color: #1e3c72;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: #1e3c72;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #2a5298;
+  transform: translateY(-2px);
+}
+
+
+.gallery-btn {
+   display: inline-block;
+    padding: 10px 20px;
+   background: radial-gradient(circle, #e2e6f5,#a0aad0);
+    color: #00094bd3;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+   border-radius: 50px;
+    box-shadow: 0 4px 14px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.thanku-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: radial-gradient(circle,#e607c8, #980780);
+  border: none;
+  border-radius: 50px; /* വശങ്ങൾ നല്ലവണ്ണം റൗണ്ട് ആക്കാൻ */
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  
+  /* സ്മൂത്ത് ആനിമേഷന് */
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+/* മാൗസ് മുകളിൽ കൊണ്ടുവരുമ്പോൾ (Hover) */
+.thanku-btn:hover {
+  transform: translateY(-4px) scale(1.03); /* ചെറുതായി മുകളിലേക്ക് ഉയരുകയും വലുതാവുകയും ചെയ്യും */
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+}
+
+/* ക്ലിക്ക് ചെയ്യുമ്പോൾ (Active) */
+.thanku-btn:active {
+  transform: translateY(-1px) scale(0.98); /* അമരുന്ന അനുഭവത്തിനായി */
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#fade-photo {
+  max-width: 90%;
+  width: 400px; /* ആവശ്യാനുസരണം മാറ്റാം */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  
+  /* Initially Hidden */
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* Smooth transition */
+}
+
+/* JS വഴി ഈ ക്ലാസ് ആഡ് ചെയ്യുമ്പോൾ ഫോട്ടോ തെളിഞ്ഞു വരും */
+#fade-photo.show {
+  opacity: 1;
+}
+
+/* Banner Styling */
+.song-banner {
+  position: fixed;
+  top: 60px;
+  right: -300px; /* Hidden off-screen to the right initially */
+  background: rgba(37, 99, 235, 0.9); /* Theme accent color */
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: right 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth slide effect */
+}
+
+/* Class to slide in from right */
+.song-banner.slide-in {
+  right: 0;
+}
+
+/* Left Banner Styling */
+.reveal-banner {
+  position: fixed;
+  top: 100px;
+  left: -300px; /* Hidden off-screen to the left initially */
+  background: rgba(37, 99, 235, 0.9); /* Dark accent color */
+  color: #ffffff; /* Glow accent text color */
+  padding: 12px 20px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: left 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth slide effect */
+}
+
+/* Class to slide in from left */
+.reveal-banner.slide-in-left {
+  left: 0;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50vh 0;
+}
+
+/* ആദ്യം ഇമേജ് കണ്ടെയ്നർ മറഞ്ഞു നിൽക്കും */
+.gallery-item {
+  opacity: 0; transition: opacity 0.6s ease;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* സ്ക്രോൾ ചെയ്യുമ്പോൾ JS വഴി 'show' ക്ലാസ് വരുമ്പോൾ ഫോട്ടോ തെളിഞ്ഞു വരും */
+.gallery-item.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Banner Styling */
+#memory-banner {
+  position: fixed;
+  top: 25px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  padding: 12px 22px;
+  border-radius: 0 30px 30px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  cursor: pointer;
+  
+  /* ഇടത് വശത്ത് നിന്ന് വരുമ്പോഴുള്ള ആനിമേഷൻ */
+  animation: slideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1.27) forwards;
+}
+
+/* Slide in animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Tap ചെയ്യുമ്പോൾ Banner തിരികെ മറയാൻ */
+#memory-banner.hide-banner {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+#memory-banner.hide-banner {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#memory-banner.hide-banner {
+  animation: none !important;
+  transform: translateX(-100%) !important;
+  opacity: 0 !important;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  pointer-events: none;
+}
+
+/* Photo smooth aayi BW aakaan transition nalkunnu */
+img {
+    transition: filter 0.6s ease, opacity 0.6s ease !important;
+}
+
+img.desaturated {
+    filter: grayscale(100%) !important;
+    -webkit-filter: grayscale(100%) !important;
+    opacity: 0.5 !important;
+}
+
+/* Diary Page Styling */
+.diary-header {
+  padding: 75px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.back-btn {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.diary-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.day-card {
+  background: #c4d8eb;
+  border: 1px solid #0f0477;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+}
+
+.day-badge {
+  background: #ffffff;
+  color: #113748;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.day-card h2 {
+  margin: 8px 0 4px 0;
+  font-size: 22px;
+}
+
+.day-date {
+  color: #280202;
+  font-size: 14.5px;
+  margin-bottom: 15px;
+}
+
+.day-content {
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+/* Left side fixed redirect button */
+.left-redirect-btn {
+  position: fixed;
+  right: 10px;
+  top: 15.5%; /* Screen-inte naduvil aayi nikkaan */
+  transform: translateY(-50%);
+  background: #ffffff;
+  color: #111111;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.left-redirect-btn:hover {
+  background: #e0e0e0;
+  transform: translateY(-50%) scale(1.05);
+}

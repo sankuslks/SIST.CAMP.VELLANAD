@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            background-color: #6a0061b4;
+            color: rgb(255, 238, 206);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover, .back-btn:active {
+            background-color: #28001a;
+        }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: #ffffff;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* ഫോട്ടോകൾ താഴെ താഴെയായി വരാൻ */
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Thank You ബട്ടൺ */
+    .thanku-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: radial-gradient(circle,#e607c8, #980780);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 22px;
+      margin-bottom: 30px;
+      transition: background-color 0.3s;
+    }
+
+    .thanku-btn:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+<div id="memory-banner">
+  <span>✨ Tap to recover Memory</span>
+</div>
+
+
+
+  <h1>Photo Gallery</h1>
+<audio id="bgm">
+  <source src="Music/saddd.mp3" type="audio/mpeg">
+</audio>
+
+  <!-- ചിത്രങ്ങൾ താഴെ താഴെയായി നൽകാൻ -->
+  <div class="gallery-container">
+    <img src="Photos/Friends/00.jpeg" alt="Photo 0">
+    <img src="Photos/girls/photo 1.jpeg" alt="Photo 1">
+    <img src="Photos/girls/photo 2.jpeg" alt="Photo 2">
+    <img src="Photos/girls/photo 3.jpeg" alt="Photo 3">
+    <img src="Photos/girls/photo 4.jpeg" alt="Photo 4">
+    <img src="Photos/girls/photo 5.jpeg" alt="Photo 5">
+    <img src="Photos/girls/photo 6.jpeg" alt="Photo 6">
+    <img src="Photos/girls/photo 7.jpeg" alt="Photo 7">
+    <img src="Photos/girls/photo 8.jpeg" alt="Photo 8">
+    <img src="Photos/girls/photo 9.jpeg" alt="Photo 9">
+    <img src="Photos/girls/photo 10.jpeg" alt="Photo 10">
+    <img src="Photos/girls/photo 11.jpeg" alt="Photo 11">
+    <img src="Photos/girls/photo 12.jpeg" alt="Photo 12">
+    <img src="Photos/girls/photo 13.jpeg" alt="Photo 13">
+    <img src="Photos/girls/photo 14.jpeg" alt="Photo 14">
+    <img src="Photos/girls/photo 15.jpeg" alt="Photo 15">
+    <img src="Photos/girls/photo 16.jpeg" alt="Photo 16">
+    <img src="Photos/girls/photo 17.jpeg" alt="Photo 17">
+    <img src="Photos/girls/photo 18.jpeg" alt="Photo 18">
+    <img src="Photos/girls/photo 19.jpeg" alt="Photo 19">
+    <img src="Photos/girls/photo 20.jpeg" alt="Photo 20">
+    <img src="Photos/girls/photo 21.jpeg" alt="Photo 21">
+    <img src="Photos/girls/photo 22.jpeg" alt="Photo 22">
+    <img src="Photos/girls/photo 23.jpeg" alt="Photo 23">
+    <img src="Photos/girls/photo 24.jpeg" alt="Photo 24">
+    <img src="Photos/girls/photo 25.jpeg" alt="Photo 25">
+    <img src="Photos/girls/photo 26.jpeg" alt="Photo 26">
+    <img src="Photos/girls/photo 27.jpeg" alt="Photo 27">
+    <img src="Photos/girls/photo 28.jpeg" alt="Photo 28">
+
+    <img src="Photos/Friends/1.jpeg" alt="Photo 1">
+    <img src="Photos/Friends/2.jpeg" alt="Photo 2">
+    <img src="Photos/Friends/3.jpeg" alt="Photo 3">
+    <img src="Photos/Friends/4.jpeg" alt="Photo 4">
+    <img src="Photos/Friends/5.jpeg" alt="Photo 5">
+    <img src="Photos/Friends/6.jpeg" alt="Photo 6">
+    <img src="Photos/Friends/7.jpeg" alt="Photo 7">
+    <img src="Photos/Friends/8.jpeg" alt="Photo 8">
+    <img src="Photos/Friends/9.jpeg" alt="Photo 9">
+    <img src="Photos/Friends/10.jpeg" alt="Photo 10">
+    <img src="Photos/Friends/11.jpeg" alt="Photo 11">
+    <img src="Photos/Friends/12.jpeg" alt="Photo 12">
+    <img src="Photos/Friends/13.jpeg" alt="Photo 13">
+    <img src="Photos/Friends/14.jpeg" alt="Photo 14">
+    <img src="Photos/Friends/15.jpeg" alt="Photo 15">
+    <img src="Photos/Friends/16.jpeg" alt="Photo 16">
+    <img src="Photos/Friends/17.jpeg" alt="Photo 17">
+    <img src="Photos/Friends/18.jpeg" alt="Photo 18">
+    <img src="Photos/Friends/19.jpeg" alt="Photo 19">
+    <img src="Photos/Friends/20.jpeg" alt="Photo 20">
+    <img src="Photos/Friends/21.jpeg" alt="Photo 21">
+    <img src="Photos/Friends/22.jpeg" alt="Photo 22">
+    <img src="Photos/Friends/23.jpeg" alt="Photo 23">
+    <img src="Photos/Friends/24.jpeg" alt="Photo 24">
+    <img src="Photos/Friends/25.jpeg" alt="Photo 25">
+    <img src="Photos/Friends/26.jpeg" alt="Photo 26">
+    <img src="Photos/Friends/277.jpeg" alt="Photo 277">
+    <img src="Photos/Friends/29.jpeg" alt="Photo 29">
+    <img src="Photos/Friends/30.jpeg" alt="Photo 30">
+      <img src="Photos/climax3.jpeg" alt="Photo 30">
+      <img src="Photos/climax.jpeg" alt="Photo 30">
+    
+    <div id="bottom-section"></div>
+    
+    <!-- കൂടുതൽ ചിത്രങ്ങൾക്ക് മുകളിലെപ്പോലെ <img> ടാഗ് ചേർക്കുക -->
+  </div>
+
+  <!-- പേജിന്റെ താഴെയുള്ള Thank You ബട്ടൺ -->
+  <a href="thanku.html" class="thanku-btn">Thanku</a>
+
+  <script>
+    // ചില ബ്രൗസറുകളിൽ Autoplay തടയുന്നത് ഒഴിവാക്കാൻ ചെറിയൊരു മാജിക്
+    window.addEventListener('click', () => {
+      const music = document.getElementById('bgm');
+      if (music.paused) {
+        music.play();
+      }
+    }, { once: true });
+  </script>
+         <a href="camp.html#bottom-section" class="back-btn">← Back to Stories</a>
+
+<link rel="stylesheet" href="style.css">
+<!-- JS ഫയൽ <body> യുടെ ഏറ്റവും താഴെ കൊടുക്കുക -->
+
+
+<script src="script.js"></script>
+</body>
+</html>
